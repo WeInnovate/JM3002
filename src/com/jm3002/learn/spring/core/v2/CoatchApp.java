@@ -1,9 +1,9 @@
-package com.jm3002.learn.spring.ioc.v3;
+package com.jm3002.learn.spring.core.v2;
 
 public class CoatchApp {
 
 	public static void main(String[] args) {
-		Coatch coatch = CoatchFactory.getCoatch();
+		Coatch coatch = new FitnessCoatch();
 		coatch.getDailyWorkout();
 	}
 }

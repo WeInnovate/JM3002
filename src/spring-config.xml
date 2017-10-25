@@ -9,14 +9,14 @@
                            http://www.springframework.org/schema/mvc
                            http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
-	<bean id="coatch" class="com.jm3002.learn.spring.ioc.v4.CricketCoatch">
+	<bean id="coatch" class="com.jm3002.learn.spring.core.v4.CricketCoatch">
 		<constructor-arg ref="fortuneService" />
 	</bean>
-	<bean id="coatch4" class="com.jm3002.learn.spring.ioc.v4.YogaCoatch"></bean>
-	<bean id="coatch2" class="com.jm3002.learn.spring.ioc.v4.FitnessCoatch"></bean>
-	<bean id="coatch3" class="com.jm3002.learn.spring.ioc.v4.FootballCoatch"></bean>
+	<bean id="coatch4" class="com.jm3002.learn.spring.core.v4.YogaCoatch"></bean>
+	<bean id="coatch2" class="com.jm3002.learn.spring.core.v4.FitnessCoatch"></bean>
+	<bean id="coatch3" class="com.jm3002.learn.spring.core.v4.FootballCoatch"></bean>
 
-	<bean id="fortuneService" class="com.jm3002.learn.spring.ioc.v4.MorningFortuneTeller"></bean>
+	<bean id="fortuneService" class="com.jm3002.learn.spring.core.v4.MorningFortuneTeller"></bean>
 
 
 

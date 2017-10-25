@@ -1,4 +1,4 @@
-package com.jm3002.learn.spring.ioc.v3;
+package com.jm3002.learn.spring.core.v4;
 
 public class FitnessCoatch implements Coatch {
 

@@ -1,4 +1,4 @@
-package com.jm3002.learn.spring.ioc.v4;
+package com.jm3002.learn.spring.core.v4;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

@@ -1,4 +1,4 @@
-package com.jm3002.learn.spring.ioc.v1;
+package com.jm3002.learn.spring.core.v1;
 
 public class CricketCoatch {
 
