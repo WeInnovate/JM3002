@@ -1,13 +1,13 @@
 package com.jm3002.learn.spring.core.v4;
 
-public class MorningFortuneTeller implements FortuneService {
+public class AfterNoonFortuneTeller implements FortuneService {
 
-	public MorningFortuneTeller(){
+	public AfterNoonFortuneTeller(){
 		System.out.println(this.getClass().getSimpleName()+" is being constructed.");
 	}
 	
 	@Override
 	public void tellTheFortune() {
-		System.out.println("You will win.");
+		System.out.println("50-50 chances.");
 	}
 }

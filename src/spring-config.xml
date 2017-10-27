@@ -9,14 +9,30 @@
                            http://www.springframework.org/schema/mvc
                            http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
-	<bean id="coatch" class="com.jm3002.learn.spring.core.v4.CricketCoatch">
+	<context:property-placeholder location="classpath:coatch.properties" />
+
+	<bean id="coatch3" class="com.jm3002.learn.spring.core.v4.CricketCoatch">
 		<constructor-arg ref="fortuneService" />
 	</bean>
 	<bean id="coatch4" class="com.jm3002.learn.spring.core.v4.YogaCoatch"></bean>
 	<bean id="coatch2" class="com.jm3002.learn.spring.core.v4.FitnessCoatch"></bean>
-	<bean id="coatch3" class="com.jm3002.learn.spring.core.v4.FootballCoatch"></bean>
+
+	<!-- <bean id="coatch" class="com.jm3002.learn.spring.core.v4.FootballCoatch">
+		<property name="fortuneService" ref="cat" />
+		<property name="nationality" value="IND" />
+		<property name="experience" value="10.7" />
+		<property name="age" value="45" />
+	</bean> -->
+	
+	<bean id="coatch" class="com.jm3002.learn.spring.core.v4.FootballCoatch">
+		<property name="fortuneService" ref="cat" />
+		<property name="nationality" value="${nationality}" />
+		<property name="experience" value="${experience}" />
+		<property name="age" value="${age}" />
+	</bean>
 
 	<bean id="fortuneService" class="com.jm3002.learn.spring.core.v4.MorningFortuneTeller"></bean>
+	<bean id="cat" class="com.jm3002.learn.spring.core.v4.AfterNoonFortuneTeller"></bean>
 
 
 
