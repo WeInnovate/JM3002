@@ -1,5 +1,8 @@
 package com.jm3002.learn.spring.core.v6;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,6 +19,8 @@ public class HondaAmaze implements Car {
 	// @Value("${hondaCity.mileage}")
 	@Value("10.7")
 	private double mileage;
+	
+	private int speed;
 
 	private MusicSystem musicSystem;
 
@@ -27,7 +32,7 @@ public class HondaAmaze implements Car {
 
 	@Override
 	public void driveTheCar() {
-		System.out.println("Driving " + color + " " + this.getClass().getSimpleName() + " with mileage of " + mileage);
+		System.out.println("Driving " + color + " " + this.getClass().getSimpleName() + " with mileage of " + mileage+" and at "+speed+" KMPH speed.");
 		musicSystem.playMusic();
 	}
 
@@ -46,5 +51,17 @@ public class HondaAmaze implements Car {
 	public void setMileage(double mileage) {
 		this.mileage = mileage;
 	}
+	
+	@PostConstruct
+	public void doSomethigAfterBeanInitialization(){
+		System.out.println("I'm running after bean initialization.");
+		this.speed = 120;
+	}
+	
+	@PreDestroy
+	public void doSomethigBeforeBeanDestruction(){
+		System.out.println("I'm running before bean destruction.");
+	}
+	
 
 }

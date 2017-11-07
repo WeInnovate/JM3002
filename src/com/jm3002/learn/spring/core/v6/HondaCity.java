@@ -24,7 +24,7 @@ public class HondaCity implements Car {
 
 	@Autowired
 	@Qualifier("appleMusicSystem")
-	public void setMusicSystem(MusicSystem musicSystem) {
+	public void selkfnlkwfnlwk(MusicSystem musicSystem) {
 		this.musicSystem = musicSystem;
 		musicSystem.playMusic();
 	}
