@@ -10,8 +10,8 @@ public class CoatchApp {
 				new ClassPathXmlApplicationContext("spring-config.xml");
 		Coatch coatch = (Coatch) context.getBean("coatch");
 		System.out.println(coatch.hashCode());
-//		Coatch coatchNew = context.getBean("coatch", Coatch.class);
-//		System.out.println(coatchNew.hashCode());
+		Coatch coatchNew = context.getBean("coatch", Coatch.class);
+		System.out.println(coatchNew.hashCode());
 		System.out.println(coatch);
 		coatch.getDailyWorkout();
 	}

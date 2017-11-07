@@ -1,17 +1,20 @@
-package com.jm3002.learn.spring.core.v5;
+package com.jm3002.learn.spring.core.v6;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope("singleton")
 public class HondaAmaze implements Car {
 
 	@Value("${hondaCity.color}")
 	private String color;
 
-	@Value("${hondaCity.mileage}")
+	// @Value("${hondaCity.mileage}")
+	@Value("10.7")
 	private double mileage;
 
 	private MusicSystem musicSystem;

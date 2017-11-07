@@ -24,7 +24,7 @@
 		<property name="age" value="45" />
 	</bean> -->
 	
-	<bean id="coatch" class="com.jm3002.learn.spring.core.v4.FootballCoatch">
+	<bean id="coatch" class="com.jm3002.learn.spring.core.v4.FootballCoatch" scope="prototype">
 		<property name="fortuneService" ref="cat" />
 		<property name="nationality" value="${nationality}" />
 		<property name="experience" value="${experience}" />

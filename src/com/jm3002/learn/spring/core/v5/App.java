@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring-ann-config.xml");
-		Car car = context.getBean("hondaJazz", Car.class);
+		Car car = context.getBean("hondaAmaze", Car.class);
 		
 		car.driveTheCar();
 	}

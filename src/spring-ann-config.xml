@@ -9,6 +9,7 @@
                            http://www.springframework.org/schema/mvc
                            http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
+<context:property-placeholder location="classpath:car.properties"/>
 <context:component-scan base-package="com.jm3002.learn.spring.core.v5" />
 
 </beans>
