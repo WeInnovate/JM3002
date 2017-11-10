@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class GreetController {
 
 	
-	@RequestMapping("/greet")
+	/*@RequestMapping("/greet")
 	public String showGreetingForm(){
 		return "greet-form";
-	}
+	}*/
 	
 	@RequestMapping("/greet")
 	public String showGreetinadakmdalgForm(){
