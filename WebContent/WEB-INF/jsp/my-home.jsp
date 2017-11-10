@@ -9,5 +9,6 @@
 <body>
 <h1>Welcome Home!</h1>
 <a href="greet">Show me Greeting Form</a>
+<a href="show-std-form">Student Form</a>
 </body>
 </html>

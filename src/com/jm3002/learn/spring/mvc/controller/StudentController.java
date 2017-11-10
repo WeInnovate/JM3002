@@ -18,7 +18,7 @@ public class StudentController {
 	
 	@RequestMapping("/process-std-form")
 	public String processStudentForm(@ModelAttribute("std") Student myStd){
-		System.out.println(myStd);
+		System.out.println(myStd.getFirstName());
 		return "student-confirmation";
 	}
 }

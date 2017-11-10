@@ -12,9 +12,43 @@
 	<h1>Greet Form!</h1>
 
 	<form:form action="process-std-form" modelAttribute="std">
-		<form:input path="firstName" />
-		<form:input path="lastName" />
-		<input type="submit" />
+		First Name: <form:input path="firstName" /><br>
+		Last Name: <form:input path="lastName" />
+		
+		<br><br>
+		
+		Male: <form:radiobutton path="gender" value="Male" /> &nbsp;
+		Female: <form:radiobutton path="gender" value="Female" />
+		<br>
+		<br>
+		Country: 
+		<form:select path="country">
+		<form:option value="IND" label="India" />
+		<form:option value="AUS" label="Austrailia" />
+		</form:select>
+		
+		<br>
+		<br>
+		
+		Courses: &nbsp;
+		Java Module 1: <form:checkbox path="courses" value="Core Java" />&nbsp;
+		Java Module 2: <form:checkbox path="courses" value="Adv Java" />&nbsp;
+		Java Module 3: <form:checkbox path="courses" value="Java FW" />&nbsp;
+		
+		
+		<br>
+		<br>
+		
+		Are you a Graduate? <form:checkbox path="grad"/>
+		
+		<br>
+		<br>
+		
+		Comment: <form:textarea path="comment"/>
+		
+		<br>
+		<br>
+		<input type="submit" value="Register" />
 	</form:form>
 </body>
 </html>
