@@ -6,14 +6,19 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style type="text/css">
+.error{
+color:red;
+}
+</style>
 <title>Student Form</title>
 </head>
 <body>
 	<h1>Greet Form!</h1>
 
 	<form:form action="process-std-form" modelAttribute="std">
-		First Name: <form:input path="firstName" /><br>
-		Last Name: <form:input path="lastName" />
+		First Name: <form:input path="firstName" /><form:errors path="firstName" cssClass="error" /> <br>
+		Last Name: <form:input path="lastName" /><form:errors path="lastName" cssClass="error" />
 		
 		<br><br>
 		
@@ -21,12 +26,22 @@
 		Female: <form:radiobutton path="gender" value="Female" />
 		<br>
 		<br>
+		Age: <form:input path="age" /><form:errors path="age" cssClass="error" />
+		<br>
+		<br>
+		
+		<br>
+		<br>
+		DOB: <form:input path="dob" /><form:errors path="dob" cssClass="error" />
+		<br>
+		<br>
+		
 		Country: 
 		<form:select path="country">
-		<form:option value="IND" label="India" />
-		<form:option value="AUS" label="Austrailia" />
+		<form:option value="IN1" label="India" />
+		<form:option value="AUS23472390n" label="Austrailia" />
 		</form:select>
-		
+		<form:errors path="country" cssClass="error" />
 		<br>
 		<br>
 		
