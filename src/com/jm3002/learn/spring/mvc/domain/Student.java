@@ -12,6 +12,8 @@ import javax.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
 
+import com.jm3002.learn.spring.mvc.ann.StudentCodePrefix;
+
 public class Student {
 	@Size(min = 3, message = " should have 3 characters")
 	@NotNull /* (message="is required") */
@@ -25,6 +27,9 @@ public class Student {
 	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	@Past
 	private Date dob;
+	
+	@StudentCodePrefix(value="STD", message=" prefix error")
+	private String stdCode;
 
 	@Min(value = 18, message = " should be adult")
 	@Max(value = 100, message = " should be human")
@@ -109,6 +114,14 @@ public class Student {
 
 	public void setDob(Date dob) {
 		this.dob = dob;
+	}
+
+	public String getStdCode() {
+		return stdCode;
+	}
+
+	public void setStdCode(String stdCode) {
+		this.stdCode = stdCode;
 	}
 
 }

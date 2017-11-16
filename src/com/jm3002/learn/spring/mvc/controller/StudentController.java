@@ -25,6 +25,7 @@ public class StudentController {
 	@RequestMapping("/show-std-form")
 	public String showStudentForm(Model theModel) {
 		theModel.addAttribute("std", new Student());
+//		theModel.addAttribute("cust", new Customer());
 		return "student-form";
 	}
 

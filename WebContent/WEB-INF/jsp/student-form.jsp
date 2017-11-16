@@ -32,6 +32,12 @@ color:red;
 		
 		<br>
 		<br>
+		Student Code: <form:input path="stdCode" /><form:errors path="stdCode" cssClass="error" />
+		<br>
+		<br>
+		
+		<br>
+		<br>
 		DOB: <form:input path="dob" /><form:errors path="dob" cssClass="error" />
 		<br>
 		<br>
