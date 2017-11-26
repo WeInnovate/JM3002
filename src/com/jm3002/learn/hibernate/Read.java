@@ -1,12 +1,14 @@
 package com.jm3002.learn.hibernate;
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import com.sun.org.apache.xalan.internal.xsltc.compiler.sym;
 
-public class HibernateHelloWorld {
+public class Read {
 	public static void main(String[] args) {
 
 		SessionFactory sessionFactory = new Configuration().configure("hibernate-config.xml")
@@ -16,17 +18,14 @@ public class HibernateHelloWorld {
 		try {
 			session.beginTransaction();
 
-			// your operation
-			Student student = new Student(1002l, "Amit", "am.wnw@gmail.com");
-			session.save(student);
+			List<Student> students = null;
+
+//			students = session.createQuery("from Student").getResultList();
+//			students = session.createQuery("from Student s where s.name = 'Amit'").getResultList();
+			students = session.createQuery("from Student s where s.name = 'Suprakash' and email='a@a.com'").getResultList();
 			
-//			Student student = session.get(Student.class, 1003l);
-//			System.out.println(student);
-//			
-//			student.setEmail("a@a.com");
-//			
+			System.out.println(students);
 			
-//			session.delete(student);
 			
 			session.getTransaction().commit();
 		} finally {
